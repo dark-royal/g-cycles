@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-container {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    background: #E3F2E1;
+    margin-top: -10px;
+}
+
+.logo {
+    width: 30px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    object-fit: contain; /* Ensures the image fits within the dimensions */
+    margin-right: 16px; /* Adds space between the image and the text */
+    margin-left: 50px;
+
+}
+
+.title {
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: green;
+}
+
+.sections-wrapper {
+    display: flex; /* Align sections horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    width: 100%; /* Ensure the wrapper takes full width */
+    margin: 0 20px; /* Optional: add horizontal margins for spacing */
+}
+
+.logo {
+    width: 30px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    object-fit: contain; /* Ensures the image fits within the dimensions */
+    margin-right: 16px; /* Adds space between the image and the text */
+}
+
+.title {
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: green;
+}
+
+/* Ensure that .section and .section1 are properly sized */
+.section,
+.section1 {
+    display: flex; /* Aligns the section items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Optional: Add specific flex-grow properties to control space distribution */
+.section {
+    flex-grow: 1; /* Allows this section to grow and fill available space */
+    gap: 100px; /* Adds space between the items */
+    margin-left: 490px;
+}
+
+.section p {
+    margin: 0; /* Removes default margin */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-size: 20px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: green;
+}
+
+.section1 {
+    flex-grow: 1; /* Allows this section to grow and fill available space */
+    gap: 50px; /* Adds space between the items */
+}
+
+.section1 p {
+    cursor: pointer;
+    border-radius: 60px;
+    color: white;
+    border: #9CC026;
+    padding: 10px 20px; /* Adds padding to make the border radius visible */
+    font-size: 19px; /* Adjust the font size as needed */
+    background-color: #9CC026; /* Adds a background color for better visibility */
+}
+
+
+/* Styles for .logos */
+.logos {
+    display: flex; /* Aligns images horizontally */
+    overflow: hidden; /* Hides overflow for a cleaner animation effect */
+    margin-top: 20px; /* Adds space above the logos section */
+    width: 700%; /* Ensures the container takes full width */
+    justify-content: center; /* Centers images horizontally */
+    position: relative; /* Necessary for animation positioning */
+    height: 450px; /* Increase height to accommodate larger images */
+    padding: 0 20px; /* Adds padding to ensure content is not too close to edges */
+}
+
+/* Ensure images are displayed one at a time */
+.logos img {
+    width: 2100px; /* Increase width */
+    height: 530px; /* Increase height */
+    object-fit: cover; /* Ensures images cover the area */
+    position: absolute; /* Absolute positioning for overlay effect */
+    opacity: 0; /* Start with images hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Keyframes for fading effect */
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    10%, 30% { opacity: 1; }
+}
+
+/* Apply animation to each image with different delays */
+.logos img:nth-child(1) {
+    animation: fade 9s infinite;
+    animation-delay: 0s;
+}
+
+.logos img:nth-child(2) {
+    animation: fade 9s infinite;
+    animation-delay: 3s; /* Adjust delay for timing */
+}
+
+.logos img:nth-child(3) {
+    animation: fade 9s infinite;
+    animation-delay: 6s; /* Adjust delay for timing */
+}
+.logos img:nth-child(4) {
+    animation: fade 12s infinite;
+    animation-delay: 9s; /* Adjust delay for timing */
+}
+.logos p {
+    position: absolute; /* Position text absolutely within the container */
+    top: 50%; /* Center vertically */
+    right: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center precisely */
+    color: white; /* Text color */
+    font-size: 50px; /* Adjust text size as needed */
+    font-weight: bold; /* Optional: make text bold */
+    z-index: 10; /* Ensure text is above images */
+    padding-right: 30px;
+    text-align: left;
+}
+.key
+ {
+
+    color: white;
+    border: 2px solid #007932;
+    padding: 20px;
+    font-size: 19px;
+    background-color: #007932;
+    margin-left: 169px;
+    width: 17%;
+
+}
+.highlight,
+.key p.reduce {
+    font-size: 24px;
+    font-weight: bold;
+}
+.highlight {
+    color: #007932;
+}
+.keys-container {
+    display: flex;
+    gap: 180px;
+
+    align-items: flex-start;
+    width: 100%;
+
+}
+.key1{
+
+    border: 2px solid #E5E5E5;
+    padding: 20px;
+    font-size: 19px;
+    background-color: #E5E5E5;
+    width: 17%;
+
+
+}
+
+.key2{
+    border: 12px solid #FFFFFF;
+    padding: 20px;
+    font-size: 19px;
+    background-color: #FFFFFF;
+    width: 17%;
+
+}
+
+.recycle{
+    font-size: 24px;
+    font-weight: bold;
+    color: #007932;
+}
+.quiz {
+    margin-top: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    margin-right: -0px;
+    border: 2px solid #E5E5E5;
+    background-color: #E5E5E5;
+
+
+}
+
+.quiz p {
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+
+.quiz-option {
+
+    margin: 5px;
+    width: 40px; /* Adjust size to make the button circular */
+    height: 40px; /* Adjust size to make the button circular */
+    font-size: 18px;
+    color: #007932;
+    background-color: white;
+    border: 2px solid #007932;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+}
+
+.quiz-option:hover {
+    background-color: #007932;
+    color: white;
+}
+
+.quiz-text {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 18px;
+    color: #007932;
+}
+.logo10{
+    margin-left: 1269px;
+    margin-top: -24900px;
+
+}
+.key,
+.Item1,
+.Item2,
+.Item3,
+.Item4,
+.Item5,
+.Item6,
+.Item7,
+.Item8,
+.Item9,
+.select,
+.logo10,
+.key1,
+.key2,
+.quiz-option {
+    transition: transform 0.3s ease;
+}
+
+.key:hover,
+.logo10:hover,
+.Item7:hover,
+.Item8:hover,
+.Item9:hover,
+.Item1:hover,
+.Item2:hover,
+.Item3:hover,
+.Item4:hover,
+.Item5:hover,
+.Item6:hover,
+.key1:hover,
+.key2:hover,
+.select:hover,
+.quiz-option:hover {
+    transform: scale(1.05);
+}
+.select{
+    font-size: 40px;
+    color: Green;
+    font-weight: bold;
+    margin-left: 135px;
+}
+
+
+
+
+
